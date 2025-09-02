@@ -24,8 +24,9 @@ app.mount("/outputs", StaticFiles(directory="outputs"), name="outputs")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://ai-codeveda.vercel.app/"],
+    # allow_origins=["https://ai-codeveda.vercel.app/"],
     #allow_origins=["http://localhost:5173"],  # change to frontend URL in production
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
