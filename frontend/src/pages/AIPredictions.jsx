@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 // ✅ Detection Results Component (Canvas with Bounding Boxes + Text List)
 function DetectionResults({ preview, predictions }) {
   const canvasRef = useRef(null);
@@ -146,8 +146,8 @@ const handleAnalyze = async () => {
     setLoading(true);
     const endpoint =
       fileType === "video"
-        ? `${import.meta.env.VITE_API_BASE_URL}/predict/video`
-        : `${import.meta.env.VITE_API_BASE_URL}/predict/image`;
+        ? `${import.meta.env.API_BASE_URL}/predict/video`
+        : `${import.meta.env.API_BASE_URL}/predict/image`;
 
     const res = await axios.post(endpoint, formData, {
       headers: { "Content-Type": "multipart/form-data" },
