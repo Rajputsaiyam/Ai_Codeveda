@@ -6,10 +6,10 @@ export default function LiveDetection() {
   const startStream = () => {
     setIsStreaming(true);
   };
-
+  const API_BASE_URL=import.meta.env.VITE_API_BASE_URL;
   const stopStream = async () => {
     try {
-      await fetch("http://127.0.0.1:8000/stop_live", { method: "POST" });
+      await fetch(`${API_BASE_URL}/stop_live`, { method: "POST" });
     } catch (error) {
       console.error("Error stopping stream:", error);
     }
