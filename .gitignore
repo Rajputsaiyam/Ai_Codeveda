@@ -1,0 +1,6 @@
+/backend/venv
+/frontend/node_modules
+/backend/data
+/backend/outputs
+/backend/uploads
+/backend/runs
