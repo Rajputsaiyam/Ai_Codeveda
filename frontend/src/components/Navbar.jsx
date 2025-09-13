@@ -26,7 +26,7 @@ export default function Navbar() {
             whileHover={{ scale: 1.05 }}
           >
             <span>🚀</span>
-            <span>Space Station AI</span>
+            <span>FalconEye</span>
           </motion.div>
 
           <div className="hidden md:flex space-x-8">
